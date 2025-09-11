@@ -5,7 +5,7 @@
 // License text available at https://opensource.org/licenses/MIT
 
 import styles from "./Cursor.module.scss";
-import { MutableRefObject, useEffect, useRef } from "react";
+import { MutableRefObject, useCallback, useEffect, useRef } from "react";
 import { gsap, Linear } from "gsap";
 import { IDesktop, isSmallScreen } from "pages";
 
@@ -18,7 +18,7 @@ const Cursor = ({ isDesktop }: IDesktop) => {
   const cursor: MutableRefObject<HTMLDivElement> = useRef(null);
   const follower: MutableRefObject<HTMLDivElement> = useRef(null);
 
-  const onHover = () => {
+  const onHover = useCallback(() => {
     gsap.to(cursor.current, {
       scale: 0.5,
       duration: 0.3,
@@ -27,9 +27,9 @@ const Cursor = ({ isDesktop }: IDesktop) => {
       scale: 3,
       duration: 0.3,
     });
-  };
+  }, []);
 
-  const onUnhover = () => {
+  const onUnhover = useCallback(() => {
     gsap.to(cursor.current, {
       scale: 1,
       duration: 0.3,
@@ -38,9 +38,9 @@ const Cursor = ({ isDesktop }: IDesktop) => {
       scale: 1,
       duration: 0.3,
     });
-  };
+  }, []);
 
-  const moveCircle = (e: MouseEvent) => {
+  const moveCircle = useCallback((e: MouseEvent) => {
     gsap.to(cursor.current, {
       x: e.clientX,
       y: e.clientY,
@@ -53,9 +53,9 @@ const Cursor = ({ isDesktop }: IDesktop) => {
       duration: 0.3,
       ease: Linear.easeNone,
     });
-  };
+  }, []);
 
-  const initCursorAnimation = () => {
+  const initCursorAnimation = useCallback(() => {
     follower.current.classList.remove("hidden");
     cursor.current.classList.remove("hidden");
 
@@ -65,13 +65,21 @@ const Cursor = ({ isDesktop }: IDesktop) => {
       el.addEventListener("mouseenter", onHover);
       el.addEventListener("mouseleave", onUnhover);
     });
-  };
+    return () => {
+      document.removeEventListener("mousemove", moveCircle);
+      document.querySelectorAll(".link").forEach((el) => {
+        el.removeEventListener("mouseenter", onHover);
+        el.removeEventListener("mouseleave", onUnhover);
+      });
+    };
+  }, [moveCircle, onHover, onUnhover]);
 
   useEffect(() => {
     if (isDesktop && !isSmallScreen()) {
-      initCursorAnimation();
+      const cleanup = initCursorAnimation();
+      return cleanup;
     }
-  }, [cursor, follower, isDesktop]);
+  }, [initCursorAnimation, isDesktop]);
 
   return (
     <>
