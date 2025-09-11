@@ -28,7 +28,7 @@ export const MENULINKS = [
 ];
 
 export const TYPED_STRINGS = [
-  "I design and develop things",
+  "I am a Full Stack Developer",
   "I develop modern frontend apps",
   "I design dynamic user experience",
   "I design and develop motion",
@@ -38,7 +38,7 @@ export const EMAIL = "alexteranr@gmail.com";
 
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/alexandra-teran-503222283",
-  github: "https://www.instagram.com/alexandrateran.r/",
+  github: "https://github.com/alexandrateranr",
   instagram: "https://www.instagram.com/alexandrateran.r/",
 }
 
@@ -54,17 +54,17 @@ export interface IProject {
 
 export const PROJECTS: IProject[] = [
   {
-    name: "PROJECT1",
-    image: "/projects/figgen.jpg",
+    name: "Fort Worth PsychWorks Report Geneation System",
+    image: "/projects/psychworks.png",
     blurImage: "/projects/blur/figgen-blur.jpg",
-    description: "Pixel perfect HTML/Tailwind for Figma Auto layout designs.",
-    gradient: ["#1F6582", "#1ABCFE"],
-    url: "https://www.figma.com/community/plugin/1065278044402066626",
-    tech: ["typescript", "figma", "tailwind"],
+    description: "This project offers an automates report generation system, enabling psychiatrist to choose or customize templates for individual patients and produce detailed reports efficiently.",
+    gradient: ["#746F95", "#3F3777"],
+    url: "https://github.com/Psych-Works/PsychWorks",
+    tech: ["next", "react", "tailwind"],
   },
   {
-    name: "ROJECT2",
-    image: "/projects/myokr.jpg",
+    name: "FrogCrew - Sports Broadcasting Management Platform",
+    image: "/projects/hogwarts.png",
     blurImage: "/projects/blur/myokr-blur.jpg",
     description: "Marketing site for OKR Platform by huminos",
     gradient: ["#153BB9", "#0E2C8B"],
@@ -72,59 +72,43 @@ export const PROJECTS: IProject[] = [
     tech: ["react", "next", "gsap", "tailwind"],
   },
   {
-    name: "PROJECT3",
-    image: "/projects/dlt-website.jpg",
+    name: "Hogwarts Shopping Cart - Frontend",
+    image: "/projects/hogwarts.png",
     blurImage: "/projects/blur/dlt-website-blur.jpg",
-    description: "Marketing site with an Internal CMS from scratch",
+    description: "I created a themed shopping cart interface that lets users view selected items, adjust quantities, check availability, and see a detailed order summary with subtotal, shipping, tax, and total cost. ",
     gradient: ["#245B57", "#004741"],
     url: "https://www.dltlabs.com/",
-    tech: ["figma", "angular", "gsap"],
+    tech: ["css", "html", "javascript"],
   },
   {
-    name: "PROJECT4",
-    image: "/projects/dl-unify.jpg",
+    name: "Flor de Cana - Call Center/Client Wbsite Redesign  ",
+    image: "/projects/flordecana.png",
     blurImage: "/projects/blur/dl-unify-blur.jpg",
-    description: "Built the application from zero to production 🚀",
-    gradient: ["#003052", "#167187"],
-    url: "https://dlunify.com/",
-    tech: ["tailwind", "angular", "gsap", "figma"],
+    description: "I redesigned the call center and client website to improve user experience and functionality.",
+    gradient: ["#E57171", "#167187"],
+    url: "https://www.flordecana.com/",
+    tech: ["react"],
   },
   {
-    name: "PROJECT5",
-    image: "/projects/ngx-quill-upload.jpg",
+    name: "Portfolio",
+    image: "/projects/portfolioo.png",
     blurImage: "/projects/blur/ngx-quill-upload-blur.jpg",
-    description: "NPM Package for Quill JS uploads from Angular",
-    gradient: ["#3A0000", "#771E1E"],
-    url: "https://www.npmjs.com/package/ngx-quill-upload",
-    tech: ["npm", "angular", "typescript"],
+    description: "Personal Portfolio!",
+    gradient: ["##2d1e1c", "#771E1E"],
+    url: "https://github.com/alexandrateranr",
+    tech: ["typescript", "react", "tailwind", "next"],
   },
   {
-    name: "Huminos website",
-    image: "/projects/huminos.jpg",
+    name: "Secret website",
+    image: "/projects/coming.png",
     blurImage: "/projects/blur/huminos-blur.jpg",
-    description: "Marketing site for Huminos bots for workplace by facebook",
-    gradient: ["#17007B", "#3A2C79"],
-    url: "https://bots.huminos.com/",
-    tech: ["javascript", "sass", "svg", "gulp"],
+    description: "Coming soon... stay tuned!",
+    gradient: ["#0D0C0C", "#3A2C79"],
+    url: "https://github.com/alexandrateranr",
+    tech: ["javascript", "react", "tailwind", "css"],
   },
-  {
-    name: "AKGEC - College Website",
-    image: "/projects/akgec.jpg",
-    blurImage: "/projects/blur/akgec-blur.jpg",
-    description: "Contributed in overall design and development",
-    gradient: ["#5E4C06", "#746528"],
-    url: "https://www.akgec.ac.in/",
-    tech: ["javascript", "html", "css"],
-  },
-  {
-    name: "Alpha Aesthetics",
-    image: "/projects/alpha.jpg",
-    blurImage: "/projects/blur/alpha-blur.jpg",
-    description: "Designed and developed the platform",
-    gradient: ["#172839", "#334659"],
-    url: "https://alpha-aesthetics.ayushsingh.net/",
-    tech: ["illustrator", "javascript", "angular"],
-  },
+  
+  
   
 ];
 
