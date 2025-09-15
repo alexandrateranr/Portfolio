@@ -1,5 +1,4 @@
 
-
 import { MutableRefObject, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Branch,
@@ -379,7 +378,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
         );
       }
     });
-  }, [svgCheckpointItems.length]);
+  }, [svgCheckpointItems]);
 
   const initScrollTrigger = useCallback((): {
     timeline: GSAPTimeline;
