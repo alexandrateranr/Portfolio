@@ -194,7 +194,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
       default:
         return "";
     }
-  }, []);
+  }, [rightBranchX]);
 
   const addLineSvgAnimation = useCallback((
     timeline: GSAPTimeline,
