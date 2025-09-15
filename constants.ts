@@ -68,7 +68,7 @@ export const PROJECTS: IProject[] = [
     blurImage: "/projects/blur/myokr-blur.jpg",
     description: "Marketing site for OKR Platform by huminos",
     gradient: ["#153BB9", "#0E2C8B"],
-    url: "https://www.huminos.com/",
+    url: "https://github.com/gkuchar/FrogCrew-Event-Scheduler",
     tech: ["react", "next", "gsap", "tailwind"],
   },
   {
@@ -77,7 +77,7 @@ export const PROJECTS: IProject[] = [
     blurImage: "/projects/blur/dlt-website-blur.jpg",
     description: "I created a themed shopping cart interface that lets users view selected items, adjust quantities, check availability, and see a detailed order summary with subtotal, shipping, tax, and total cost. ",
     gradient: ["#245B57", "#004741"],
-    url: "https://www.dltlabs.com/",
+    url: "https://github.com/alexandrateranr/hogwarts-artifacts-online",
     tech: ["css", "html", "javascript"],
   },
   {
@@ -95,7 +95,7 @@ export const PROJECTS: IProject[] = [
     blurImage: "/projects/blur/ngx-quill-upload-blur.jpg",
     description: "Personal Portfolio!",
     gradient: ["##2d1e1c", "#771E1E"],
-    url: "https://github.com/alexandrateranr",
+    url: "https://github.com/alexandrateranr/Portfolio",
     tech: ["typescript", "react", "tailwind", "next"],
   },
   {

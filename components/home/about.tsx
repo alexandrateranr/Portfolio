@@ -67,16 +67,7 @@ const AboutSection = () => {
         I am a Full Stack Developer with a strong foundation in both frontend and
         backend technologies, focused on building efficient and maintainable web applications.{" "}
       </span>
-      <span
-        className={`about-2 leading-tight ${
-          willChange ? "will-change-opacity" : ""
-        }`}
-      >
-       I’m committed to delivering high-quality user 
-       experiences through modern frontend architecture.
-
-
-      </span>
+      
     </h1>
   );
 

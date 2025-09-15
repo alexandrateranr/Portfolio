@@ -10,6 +10,10 @@ const nextConfig = {
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  images: {
+    unoptimized: true, // Disable image optimization for better compatibility
+    domains: [], // Add any external domains here if needed
+  },
 }
 
 module.exports = nextConfig
