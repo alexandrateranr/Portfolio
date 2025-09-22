@@ -464,13 +464,16 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
             <div className={`w-full absolute top-0 slide-${
                 index + 1
               }`}>
-              <Image
-                className="object-cover"
-                src={(item as CheckpointNode).slideImage || ""}
-                key={`${(item as CheckpointNode).title}-${index}`}
-                alt="Timeline"
-                fill
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  className="object-cover"
+                  src={(item as CheckpointNode).slideImage || ""}
+                  key={`${(item as CheckpointNode).title}-${index}`}
+                  alt="Timeline"
+                  width={400}
+                  height={300}
+                />
+              </div>
             </div>
           ))}
         </div>

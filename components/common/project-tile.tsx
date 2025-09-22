@@ -45,8 +45,8 @@ const ProjectTile = ({
               src={`/projects/tech/${tech}.svg`}
               alt={tech}
               height={45}
-              objectFit="contain"
               width={45}
+              className="object-contain"
             />
           </div>
         ))}
@@ -94,14 +94,15 @@ const ProjectTile = ({
     blurImage: string,
     name: string
   ): React.ReactNode => (
-    <Image
-      placeholder="blur"
-      blurDataURL={blurImage}
-      src={image}
-      alt={name}
-      layout="fill"
-      className={`${styles.ProjectImg} z-0`}
-    />
+    <div className={`${styles.ProjectImg} z-0 relative w-full h-full`}>
+      <Image
+        src={image}
+        alt={name}
+        width={400}
+        height={300}
+        className="object-cover"
+      />
+    </div>
   );
 
   return (
@@ -128,11 +129,10 @@ const ProjectTile = ({
           background: `linear-gradient(90deg, ${stop1} 0%, ${stop2} 100%)`,
         }}
       >
-        <Image
+        <img
           src="/project-bg.svg"
           alt="Project"
-          layout="fill"
-          className="absolute w-full h-full top-0 left-0 opacity-20"
+          className="absolute w-full h-full top-0 left-0 opacity-20 object-cover"
         />
         {renderProjectImage(image, blurImage, name)}
         {renderTopBottomGradient(stop1)}
