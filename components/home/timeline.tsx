@@ -10,7 +10,6 @@ import {
   TIMELINE,
   TimelineNodeV2,
 } from "../../constants";
-import Image from "next/image";
 import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { IDesktop, isSmallScreen } from "pages";
@@ -36,7 +35,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
 
   const timelineSvg: MutableRefObject<SVGSVGElement> = useRef(null);
   const svgContainer: MutableRefObject<HTMLDivElement> = useRef(null);
-  const screenContainer: MutableRefObject<HTMLDivElement> = useRef(null);
+  
 
   const addNodeRefsToItems = useCallback(
     (timeline: Array<TimelineNodeV2>): Array<LinkedTimelineNode> => {
@@ -356,29 +355,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
     }
   }, [generateTimelineSvg]);
 
-  const setSlidesAnimation = useCallback((timeline: GSAPTimeline): void => {
-    svgCheckpointItems.forEach((_, index) => {
-      // all except the first slide
-      if (index !== 0) {
-        timeline.fromTo(
-          screenContainer.current.querySelector(`.slide-${index + 1}`),
-          { opacity: 0 },
-          { opacity: 1 }
-        );
-      }
-
-      // all except the last slide
-      if (index !== svgCheckpointItems.length - 1) {
-        timeline.to(
-          screenContainer.current.querySelector(`.slide-${index + 1}`),
-          {
-            opacity: 0,
-            delay: 2.35,
-          }
-        );
-      }
-    });
-  }, [svgCheckpointItems]);
+  
 
   const initScrollTrigger = useCallback((): {
     timeline: GSAPTimeline;
@@ -394,31 +371,11 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
     let end: string;
     let additionalConfig = {};
 
-    // Slide as a trigger for Desktop
-    if (isDesktop && !isSmallScreen()) {
-      // Animation for right side slides
-      setSlidesAnimation(timeline);
-
-      const platformHeight =
-        screenContainer.current.getBoundingClientRect().height;
-
-      trigger = screenContainer.current;
-      start = `top ${(window.innerHeight - platformHeight) / 2}`;
-      end = `+=${svgLength - platformHeight}`;
-      additionalConfig = {
-        pin: true,
-        pinSpacing: true,
-      };
-      duration = timeline.totalDuration() / svgCheckpointItems.length;
-    } else {
-      // Clearing out the right side on mobile devices
-      screenContainer.current.innerHTML = "";
-
-      trigger = svgContainer.current;
-      start = "top center";
-      end = `+=${svgLength}`;
-      duration = 3;
-    }
+    // Use the SVG container as the trigger on all devices (slides removed)
+    trigger = svgContainer.current;
+    start = "top center";
+    end = `+=${svgLength}`;
+    duration = 3;
 
     ScrollTrigger.create({
       ...additionalConfig,
@@ -429,7 +386,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
       animation: timeline,
     });
     return { timeline, duration };
-  }, [isDesktop, svgLength, svgCheckpointItems.length, setSlidesAnimation]);
+  }, [isDesktop, svgLength]);
 
   useEffect(() => {
     // Generate and set the timeline svg
@@ -445,41 +402,7 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
     initScrollTrigger,
     animateTimeline,
   ]);
-
-  const renderSlides = (): React.ReactNode => (
-    <div
-      className="max-w-full h-96 shadow-xl bg-gray-800 rounded-2xl overflow-hidden"
-      ref={screenContainer}
-    >
-      <Image
-        className="w-full h-8"
-        src="/timeline/title-bar.svg"
-        alt="Title bar"
-        width={644}
-        height={34}
-      />
-      <div className="relative h-full w-full -mt-2">
-        <div className="absolute top-0 left-0 h-full w-full">
-          {svgCheckpointItems.map((item, index) => (
-            <div className={`w-full absolute top-0 slide-${
-                index + 1
-              }`}>
-              <div className="relative w-full h-full">
-                <Image
-                  className="object-cover"
-                  src={(item as CheckpointNode).slideImage || ""}
-                  key={`${(item as CheckpointNode).title}-${index}`}
-                  alt="Timeline"
-                  width={400}
-                  height={300}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+  
 
   const renderSVG = (): React.ReactNode => (
     <svg
@@ -510,9 +433,6 @@ const TimelineSection = ({ isDesktop }: IDesktop) => {
       <div className="grid grid-cols-12 gap-4 mt-20">
         <div className="col-span-12 md:col-span-6 line-svg" ref={svgContainer}>
           {renderSVG()}
-        </div>
-        <div className="col-span-12 md:col-span-6 md:flex hidden">
-          {renderSlides()}
         </div>
       </div>
     </section>

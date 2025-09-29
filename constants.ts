@@ -81,7 +81,7 @@ export const PROJECTS: IProject[] = [
     tech: ["css", "html", "javascript"],
   },
   {
-    name: "Flor de Cana - Call Center/Client Wbsite Redesign  ",
+    name: "Flor de Cana -Website Redesign  ",
     image: "/projects/flordecana.png",
     blurImage: "/projects/blur/dl-unify-blur.jpg",
     description: "I redesigned the call center and client website to improve user experience and functionality.",
@@ -99,13 +99,13 @@ export const PROJECTS: IProject[] = [
     tech: ["typescript", "react", "tailwind", "next"],
   },
   {
-    name: "Secret website",
-    image: "/projects/coming.png",
+    name: "LeaveFlow - Time Off Request Management System",
+    image: "/projects/employee.png",
     blurImage: "/projects/blur/huminos-blur.jpg",
-    description: "Coming soon... stay tuned!",
+    description: "LeaveFlow is a full-stack web application that allows employees to submit time-off requests and managers to approve or reject them.",
     gradient: ["#0D0C0C", "#3A2C79"],
     url: "https://github.com/alexandrateranr",
-    tech: ["javascript", "react", "tailwind", "css"],
+    tech: ["javascript", "react", "tailwind",],
   },
   
   
@@ -175,7 +175,6 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     subtitle:
       "Spent 4 years laying the foundation of Frontend Engineering, UI/UX, and Information Technology!",
       image: "/timeline/tculogo.svg",
-      slideImage: "/timeline/finalpresentationme.jpg",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
