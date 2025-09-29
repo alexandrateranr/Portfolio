@@ -99,13 +99,13 @@ export const PROJECTS: IProject[] = [
     tech: ["typescript", "react", "tailwind", "next"],
   },
   {
-    name: "Secret website",
-    image: "/projects/coming.png",
+    name: "LeaveFlow",
+    image: "/projects/employee.png",
     blurImage: "/projects/blur/huminos-blur.jpg",
-    description: "Coming soon... stay tuned!",
+    description: "LeaveFlow is a full-stack web application that allows employees to submit time-off requests and managers to approve or reject them.",
     gradient: ["#0D0C0C", "#3A2C79"],
     url: "https://github.com/alexandrateranr/EmployeLeaveRequests",
-    tech: ["javascript", "react", "tailwind", "css"],
+    tech: ["javascript", "react", "tailwind", ],
   },
   
   
