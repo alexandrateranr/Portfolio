@@ -64,12 +64,12 @@ export const PROJECTS: IProject[] = [
   },
   {
     name: "FrogCrew - Sports Broadcasting Management Platform",
-    image: "/projects/hogwarts.png",
+    image: "/projects/frogcrew.png",
     blurImage: "/projects/blur/myokr-blur.jpg",
-    description: "Marketing site for OKR Platform by huminos",
+    description: "FrogCrew is a crew scheduling and event management platform used by TCU Sports Broadcasting to assign student workers to live sports productions, track availability, and streamline broadcast staffing",
     gradient: ["#153BB9", "#0E2C8B"],
     url: "https://github.com/gkuchar/FrogCrew-Event-Scheduler",
-    tech: ["react", "next", "gsap", "tailwind"],
+    tech: ["react", "next", "gsap", ],
   },
   {
     name: "Hogwarts Shopping Cart - Frontend",
@@ -81,7 +81,7 @@ export const PROJECTS: IProject[] = [
     tech: ["css", "html", "javascript"],
   },
   {
-    name: "Flor de Cana -Website Redesign  ",
+    name: "Flor de Cana - Call Center/Client Wbsite Redesign  ",
     image: "/projects/flordecana.png",
     blurImage: "/projects/blur/dl-unify-blur.jpg",
     description: "I redesigned the call center and client website to improve user experience and functionality.",
@@ -99,13 +99,13 @@ export const PROJECTS: IProject[] = [
     tech: ["typescript", "react", "tailwind", "next"],
   },
   {
-    name: "LeaveFlow - Time Off Request Management System",
-    image: "/projects/employee.png",
+    name: "Secret website",
+    image: "/projects/coming.png",
     blurImage: "/projects/blur/huminos-blur.jpg",
-    description: "LeaveFlow is a full-stack web application that allows employees to submit time-off requests and managers to approve or reject them.",
+    description: "Coming soon... stay tuned!",
     gradient: ["#0D0C0C", "#3A2C79"],
-    url: "https://github.com/alexandrateranr",
-    tech: ["javascript", "react", "tailwind",],
+    url: "https://github.com/alexandrateranr/EmployeLeaveRequests",
+    tech: ["javascript", "react", "tailwind", "css"],
   },
   
   
@@ -175,6 +175,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     subtitle:
       "Spent 4 years laying the foundation of Frontend Engineering, UI/UX, and Information Technology!",
       image: "/timeline/tculogo.svg",
+      slideImage: "/timeline/finalpresentationme.jpg",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
