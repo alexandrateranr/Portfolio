@@ -162,7 +162,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     title: "Full Stack Developer (Current)",
     size: ItemSize.SMALL,
     subtitle:
-      "Full Stack Developer @ Compania Licorera (Flor de Cana)",
+      " @ Compania Licorera (Flor de Caña)",
     image: "/timeline/logoflordecana.svg",
     slideImage: "/timeline/flordecana.jpg",
     shouldDrawLine: true,
@@ -173,7 +173,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     title: "Graduated from College 🎓",
     size: ItemSize.SMALL,
     subtitle:
-      "Spent 4 years laying the foundation of Frontend Engineering, UI/UX, and Information Technology!",
+      "Graduated from Texas Christian University with a Bachelor of Science in Computer Information Technology!",
       image: "/timeline/tculogo.svg",
       slideImage: "/timeline/finalpresentationme.jpg",
     shouldDrawLine: true,
@@ -184,7 +184,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     title: "Data Analytics Intern",
     size: ItemSize.SMALL,
     subtitle:
-      "Data Analytics @ Generadora Electrica Occidental (GEOSA)",
+      " @ Generadora Electrica Occidental (GEOSA)",
     slideImage: "/timeline/GEOSA.jpg",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
@@ -201,7 +201,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     title: "Copy Editor",
     size: ItemSize.SMALL,
     subtitle:
-      "Edit and analyzed all news reports to the TCU360 Website @ TCU360",
+      "Managed and analyzed news reports to the TCU360 Website ",
       image: "/timeline/tculogo.svg",
     slideImage: "/timeline/logotcu.jpg",
     shouldDrawLine: true,
