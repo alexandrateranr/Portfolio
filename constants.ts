@@ -68,7 +68,7 @@ export const PROJECTS: IProject[] = [
     blurImage: "/projects/blur/huminos-blur.jpg",
     description: "Automate Ticketing App: Smart, seamless, and secure.",
     gradient: ["#4A148C", "#1A237E"],
-    url: "https://github.com/alexandrateranr/EmployeLeaveRequests",
+    url: "https://github.com/alexandrateranr/TICKT",
     tech: ["javascript", "react", "tailwind", "HTML"],
   },
   {
