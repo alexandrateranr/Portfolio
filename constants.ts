@@ -66,10 +66,10 @@ export const PROJECTS: IProject[] = [
     name: "TICKT",
     image: "/projects/tickt.png",
     blurImage: "/projects/blur/huminos-blur.jpg",
-    description: "",
+    description: "Automate Ticketing App: Smart, seamless, and secure.",
     gradient: ["#4A148C", "#1A237E"],
     url: "https://github.com/alexandrateranr/EmployeLeaveRequests",
-    tech: ["javascript", "react", "tailwind", ],
+    tech: ["javascript", "react", "tailwind", "HTML"],
   },
   {
     name: "FrogCrew - Sports Broadcasting Management Platform",
