@@ -72,8 +72,8 @@ const HeroSection = React.memo(() => {
   const renderHeroContent = (): React.ReactNode => (
     <div className={HERO_STYLES.CONTENT}>
       <div className="md:mb-4 mb-2">
-        <h2 className="text-6xl seq">Hello 👋🏻</h2>
-        <h1 className="text-5xl seq">I am Alexandra Teran</h1>
+        <h2 className="text-6xl seq text-shimmer">Hello 👋🏻</h2>
+        <h1 className="text-5xl seq text-shimmer">I am Alexandra Teran</h1>
       </div>
       <p className="mb-4">
         <span className={HERO_STYLES.TYPED_SPAN} ref={typedSpanElement}></span>
@@ -81,7 +81,7 @@ const HeroSection = React.memo(() => {
       <div className="flex seq mb-5">{renderSocialLinks()}</div>
       <div className="flex seq">
         <Button
-          classes="mr-3"
+          classes="mr-3 hover-glow"
           type={ButtonTypes.OUTLINE}
           name="Resume"
           otherProps={{
@@ -91,7 +91,7 @@ const HeroSection = React.memo(() => {
           href="/Resume6.0.pdf"
         ></Button>
         <Button
-          classes="ml-3"
+          classes="ml-3 hover-glow"
           type={ButtonTypes.PRIMARY}
           name="Let's Talk"
           href={`mailto:${EMAIL}`}
@@ -113,6 +113,16 @@ const HeroSection = React.memo(() => {
       ref={targetSection}
       style={{ opacity: 0 }}
     >
+      {/* Floating background elements */}
+      <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400 rounded-full opacity-30 floating-element"></div>
+      <div className="absolute top-40 right-20 w-4 h-4 bg-purple-400 rounded-full opacity-25 floating-element" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-40 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-20 floating-element" style={{ animationDelay: '4s' }}></div>
+      <div className="absolute top-60 right-40 w-3 h-3 bg-indigo-400 rounded-full opacity-30 floating-element" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute bottom-60 right-10 w-2 h-2 bg-pink-400 rounded-full opacity-25 floating-element" style={{ animationDelay: '3s' }}></div>
+      
+      {/* Background particles */}
+      <div className="bg-particles"></div>
+      
       {renderHeroContent()}
     </section>
   );

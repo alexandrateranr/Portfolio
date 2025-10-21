@@ -63,6 +63,15 @@ export const PROJECTS: IProject[] = [
     tech: ["next", "react", "tailwind"],
   },
   {
+    name: "TICKT",
+    image: "/projects/tickt.png",
+    blurImage: "/projects/blur/huminos-blur.jpg",
+    description: "",
+    gradient: ["#4A148C", "#1A237E"],
+    url: "https://github.com/alexandrateranr/EmployeLeaveRequests",
+    tech: ["javascript", "react", "tailwind", ],
+  },
+  {
     name: "FrogCrew - Sports Broadcasting Management Platform",
     image: "/projects/frogcrew.png",
     blurImage: "/projects/blur/myokr-blur.jpg",

@@ -45,7 +45,7 @@ const SkillsSection = () => {
   const renderSectionTitle = (): React.ReactNode => (
     <div className="flex flex-col">
       <p className="section-title-sm seq">SKILLS</p>
-      <h1 className="section-heading seq mt-2">My Skills</h1>
+      <h1 className="section-heading seq mt-2 text-shimmer">My Skills</h1>
      
     </div>
   );

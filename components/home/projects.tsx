@@ -124,7 +124,7 @@ const ProjectsSection = ({ isDesktop }: IDesktop) => {
       ref={sectionTitleElementRef}
     >
       <p className="section-title-sm seq">PROJECTS</p>
-      <h1 className="section-heading seq mt-2">My Works</h1>
+      <h1 className="section-heading seq mt-2 text-shimmer">My Works</h1>
       <h2 className="text-2xl md:max-w-3xl w-full seq max-w-sm mt-2">
       I&apos;ve worked on full stack web applications, internal tools, and cross-functional
        IT solutions in both academic and corporate settings.

@@ -25,7 +25,7 @@
 }
 
 body {
-  background-color: #0a0a0a;
+  background-color: #000000;
   @apply text-gray-100 overflow-x-hidden;
   cursor: none;
   position: relative;
@@ -38,13 +38,41 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-      radial-gradient(circle at 25% 25%, #0ea5e9 3px, transparent 3px),
-      radial-gradient(circle at 75% 75%, #38bdf8 3px, transparent 3px);
-    background-size: 40px 40px;
-    opacity: 0.15;
-    animation: float 20s ease-in-out infinite;
+      radial-gradient(circle at 25% 25%, #0ea5e9 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, #38bdf8 2px, transparent 2px);
+    background-size: 60px 60px;
+    opacity: 0.1;
+    animation: float 25s ease-in-out infinite;
     pointer-events: none;
     z-index: -1;
+  }
+  
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(ellipse at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 40% 40%, rgba(14, 165, 233, 0.03) 0%, transparent 50%);
+    animation: gradientShift 20s ease infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -54,6 +82,24 @@ body {
   }
   50% { 
     transform: translateY(-10px) rotate(180deg); 
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
   }
 }
 
@@ -271,4 +317,102 @@ footer {
 
 .section-title-sm {
   @apply uppercase tracking-widest text-gray-200 text-sm;
+}
+
+// Cool animation classes
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #38bdf8 25%,
+    #0ea5e9 50%,
+    #38bdf8 75%,
+    #ffffff 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    box-shadow: 
+      0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 40px rgba(59, 130, 246, 0.2),
+      0 0 60px rgba(59, 130, 246, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+// Enhanced project tiles with subtle animations
+.project-tile-enhanced {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.6s ease;
+  }
+  
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 0 20px rgba(59, 130, 246, 0.2);
+    
+    &::before {
+      left: 100%;
+    }
+  }
+}
+
+// Subtle background particles
+.bg-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #38bdf8;
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+    box-shadow: 
+      100px 200px 0 #0ea5e9,
+      300px 100px 0 #3b82f6,
+      500px 300px 0 #8b5cf6,
+      700px 150px 0 #06b6d4,
+      900px 250px 0 #10b981;
+  }
 }

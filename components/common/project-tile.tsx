@@ -110,7 +110,7 @@ const ProjectTile = ({
       href={project.url}
       target="_blank"
       rel="noreferrer"
-      className="link overflow-hidden rounded-3xl snap-start"
+      className="link overflow-hidden rounded-3xl snap-start project-tile-enhanced"
       style={{
         maxWidth: animationEnabled
           ? "calc(100vw - 2rem)"
