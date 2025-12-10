@@ -63,6 +63,15 @@ export const PROJECTS: IProject[] = [
     tech: ["next", "react", "tailwind"],
   },
   {
+    name: "Jewerly Shop Website",
+    image: "/projects/jewelryshop.png",
+    blurImage: "/projects/blur/figgen-blur.jpg",
+    description: "An elegant, modern jewelry shop website designed to fit the style and needs of any type of client.",
+    gradient: ["#746F95", "#3F3777"],
+    url: "https://alexandrateranr.github.io/",
+    tech: ["javascript", "HTML", "css"],
+  },
+  {
     name: "TICKT",
     image: "/projects/tickt.png",
     blurImage: "/projects/blur/huminos-blur.jpg",
