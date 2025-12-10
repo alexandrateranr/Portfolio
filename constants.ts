@@ -67,7 +67,7 @@ export const PROJECTS: IProject[] = [
     image: "/projects/jewelryshop.png",
     blurImage: "/projects/blur/figgen-blur.jpg",
     description: "An elegant, modern jewelry shop website designed to fit the style and needs of any type of client.",
-    gradient: ["#746F95", "#3F3777"],
+    gradient: ["#E8DCC6", "#6B7280"],
     url: "https://alexandrateranr.github.io/",
     tech: ["javascript", "HTML", "css"],
   },
